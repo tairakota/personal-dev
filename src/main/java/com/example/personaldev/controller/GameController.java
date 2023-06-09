@@ -51,18 +51,18 @@ public class GameController {
     }
 
     @GetMapping("/add")
-    public String add(@ModelAttribute("addForm") AddForm addForm) {
+    public String add() {
         return "add";
     }
-    @PostMapping("/add")
-    public String addCheck(@Validated @ModelAttribute("addForm") AddForm addForm, BindingResult bindingResult) {
-        if(bindingResult.hasErrors()) {
-            return "add";
-        }
-        var i = gameService.add(addForm.getAddName(), addForm.getAddPass());
-        System.out.println(i);
-        return "redirect:/title";
-    }
+//    @PostMapping("/add")
+//    public String addCheck(@Validated @ModelAttribute("addForm") AddForm addForm, BindingResult bindingResult) {
+//        if(bindingResult.hasErrors()) {
+//            return "add";
+//        }
+//        var i = gameService.add(addForm.getAddName(), addForm.getAddPass());
+//        System.out.println(i);
+//        return "redirect:/title";
+//    }
 
     @GetMapping("/menu")
     public String menu() {
