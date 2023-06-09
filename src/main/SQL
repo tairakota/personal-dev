@@ -1,0 +1,59 @@
+--データベース作成
+create database personal_dev;
+
+--テーブル作成
+create table users (
+id serial primary key,
+name varchar(10),
+pass varchar(20),
+time_normal varchar(6),
+time_normals int,
+time_hard varchar(6),
+time_hards int
+);
+
+--nameに一意性制約を追加
+ALTER TABLE users
+ADD CONSTRAINT unique_value UNIQUE (name);
+
+--データ作成（テスト用）
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('retoro', 'maimai', '5:30', 330, '6:30', 390);
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('seta', 'maimai', '1:30', 90, '5:20', 320);
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('iro', 'maimai', '1:25', 85, '5:00', 300);
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('ka', 'maimai', '0:30', 30, '2:30', 150);
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('oka', 'maimai', '0:20', 20, '1:30', 90);
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('nom', 'maimai', '0:30', 30, '1:00', 60);
+
+
+
+
+--ログイン時
+select name from users where name = 'retoro' and pass = 'maimai';
+
+--新規登録時
+insert into users (name, pass, time_normal, time_normals, time_hard, time_hards) values ('kota', '1234', '99:99', 693, '99:99', 693);
+
+--プレイヤーデータ閲覧時
+select name, time_normal, time_hard from users where name = 'retoro';
+
+--名前変更時
+update users set name = 'autoro' where name = 'retoro';
+
+--ランキング閲覧時（normal）
+select name, time_normal from users where time_normal is not null order by time_normals limit 5;
+
+--ランキング閲覧時（hard）
+select name, time_hard from users where time_hard is not null order by time_hards limit 5;
+
+--クリアタイム挿入（normal）
+update users set time_normal = '3:33', time_normals = 213 where name = 'retoro' and time_normals > 213;
+
+--クリアタイム挿入（hard）
+update users set time_hard = '1:30', time_hards = 90 where name = 'retoro' and time_hards > 90;
+
+
+
+
+--テーブル消去
+drop table users;
+
