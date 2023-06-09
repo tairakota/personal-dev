@@ -1,0 +1,36 @@
+
+.data {
+    height: 360px;
+}
+
+.name {
+    font-size: 32px;
+    padding: 50px 0px 50px 250px;
+}
+
+.time-n, .time-h {
+    font-size: 32px;
+    padding: 10px 0px 0px 250px;}
+
+.change {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 145px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.back {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 130px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

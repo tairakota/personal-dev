@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>迷路</title>
+    <link rel="stylesheet" type="text/css" href="/css/play.css">
+    <link rel="stylesheet" type="text/css" href="/css/player.css">
+</head>
+<body>
+    <div id="levelId">[[ ${level} ]]</div>
+    <div class="overlay" id="countdownOverlay">
+        <div class="popup" id="countdownPopup">
+            <span id="countdown">3</span>
+        </div>
+    </div>
+
+    <div class="stopwatch" id="stopwatch" name="stopWatch">0:00</div>
+    <button onclick="stopStopwatch()">停止</button>
+    <div id="m" name="m"></div>
+    <div id="s" name="s"></div>
+
+    <div class="backG">
+        <div id="obstacle2"></div>
+        <div id="goal2"></div>
+        <div id="player2" style="top: 30px; left: 30px;"></div>
+        <div id="grid2"></div>
+        <div id="content" class="content" style="top: 50px; left: 50px;">
+            <div id="rang" class="rang" style="top: 15px; left: 15px;">
+                <div id="obstacle"></div>
+                <div id="goal"></div>
+                <div id="player" style="top: 30px; left: 30px;"></div>
+                <div id="grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearOverlay" id="clearOverlayId">
+        <div class="clearPopup" id="clearPopupId">
+            <p class="text">CLEAR!!!</p>
+            <p class="text">たいむ　<span id="clearTime"></span></p>
+            <a href="/level"><button class="selectLevel">難易度選択</button></a>
+            <a href="/playTest"><button class="retry">リトライ</button></a>
+            <a href="/menu"><button class="backMenu">メニューへ戻る</button></a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/time.js"></script>
+    <script type="text/javascript" src="/js/player.js"></script>
+    <script type="text/javascript" src="/js/maze.js"></script>
+</body>
+</html>

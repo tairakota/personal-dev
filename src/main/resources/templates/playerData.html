@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>プレイヤーデータ画面</title>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/playerData.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">プレイヤーデータ</div>
+    </div>
+    <div class="data" th:object="${playerData}">
+        <div class="name">　　　　名前：　[[ *{playerName} ]]</div>
+        <div class="time-n">クリアタイム：　　　ふつう　→　[[ *{playerTime_n} ]]</div>
+        <div class="time-h">　　　　　　　　むずかしい　→　[[ *{playerTime_h} ]]</div>
+    </div>
+    <a href="/change"><button class="change">名前変更</button></a>
+    <a href="/menu"><button class="back">戻る</button></a>
+
+</body>
+</html>

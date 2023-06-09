@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー画面</title>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script>
+    function toggleCheckbox() {
+      var checkbox = document.getElementById("pop-up");
+      checkbox.checked = !checkbox.checked;
+    }
+    </script>
+</head>
+<body>
+    <div class="header">
+      <div class="header-logo">メニュー</div>
+    </div>
+    <div class="select">
+        <div class="play"><a href="/level">プレイ</a></div>
+        <div class="playerData"><a href="/playerData">プレイヤーデータ</a></div>
+        <div class="ranking"><a href="/ranking">ランキング</a></div>
+    </div>
+    <button class="logout" onclick="toggleCheckbox()">ログアウト</button>
+    <input type="checkbox" id="pop-up">
+    <div class="overlay">
+        <div class="window">
+            <p class="text">ログアウトしますか？</p>
+            <button class="close" onclick="toggleCheckbox()">いいえ</button>
+            <a href="/logout"><button id="logout">はい</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+.overlay {
+    display: block;
+    z-index: 9999;
+    background-color: #00000070;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.popup {
+    width: 90vw;
+    max-width: 380px;
+    height: 240px;
+    background-color: skyBlue;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.stopwatch {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    font-size: 50px;
+}
+
+#clearOverlayId {
+    display: none;
+    z-index: 9999;
+    background-color: #00000070;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#clearPopupId {
+    width: 90vw;
+    max-width: 550px;
+    height: 400px;
+    background-color: skyBlue;
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.selectLevel {
+    width: 155px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.retry {
+    width: 155px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.backMenu {
+    width: 155px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#levelId {
+    display: none;
+}
+#m {
+    display: none;
+}
+#s {
+    display: none;
+}
+
+.backG {
+    background-color: black;
+    width: 690px;
+    height: 450px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.content {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* マスキングの色と透明度を設定 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: luminosity; /* マスキングのモードを設定 */
+}

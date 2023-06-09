@@ -1,0 +1,37 @@
+.main {
+    height: 360px;
+}
+
+h1 {
+    width: 170px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 55px;
+}
+
+.select {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 150px;
+    font-size: 45px;
+}
+
+.play {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 145px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.back {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 130px;
+    padding: 10px;
+    font-size: 30px;
+}

@@ -1,0 +1,75 @@
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    position: absolute;
+}
+#obstacle {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#goal {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.rang {
+    position: absolute;
+    width: 690px;
+    height: 450px;
+    border: 1px solid black;
+}
+.block {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0;
+}
+.white {
+    background-color: #ffffff;
+}
+.black {
+    background-color: #000000;
+}
+#grid {
+    line-height: 0;
+}
+
+
+#player2 {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    position: absolute;
+    display: none;
+}
+#obstacle2 {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: none;
+}
+#goal2 {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+}
+#grid2 {
+    display: none;
+    line-height: 0;
+}

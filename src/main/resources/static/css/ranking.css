@@ -1,0 +1,57 @@
+
+.rank {
+    height: 360px;
+}
+.normal {
+    position: fixed;
+    left: 20%;
+    width: 320px;
+    height: 360px;
+}
+.hard {
+    position: fixed;
+    left: 70%;
+    width: 320px;
+    height: 360px;
+}
+.text {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.table {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    width: 450px;
+    height: 298.67px;
+    padding: 0px 10px;
+    justify-content: space-between;
+}
+.data {
+    width: 386.85px;
+}
+.tr {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+}
+.td {
+    font-size: 25px;
+    padding: 10px 15px
+}
+
+.back {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 130px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
