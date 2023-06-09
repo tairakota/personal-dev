@@ -15,10 +15,10 @@ public class RestGameController {
     private HttpSession session;
 
     @GetMapping("/playTest-score")
-    public void timeUpdate(@RequestParam(name="m")String n, @RequestParam(name="s")String s, @RequestParam(name="stopWatch")String time) {
+    public void timeUpdate(@RequestParam(name="m")String m, @RequestParam(name="s")String s, @RequestParam(name="stopWatch")String time) {
         var name = session.getAttribute("userS").toString();
 
-        var nn = Integer.parseInt(n);
+        var nn = Integer.parseInt(m);
         var ss = Integer.parseInt(s);
         var timeSeconds = nn * 6 + ss;
 
@@ -26,10 +26,10 @@ public class RestGameController {
     }
 
     @GetMapping("/playTest-scoreH")
-    public void timeUpdateH(@RequestParam(name="m")String n, @RequestParam(name="s")String s, @RequestParam(name="stopWatch")String time) {
+    public void timeUpdateH(@RequestParam(name="m")String m, @RequestParam(name="s")String s, @RequestParam(name="stopWatch")String time) {
         var name = session.getAttribute("userS").toString();
 
-        var nn = Integer.parseInt(n);
+        var nn = Integer.parseInt(m);
         var ss = Integer.parseInt(s);
         var timeSeconds = nn * 6 + ss;
 

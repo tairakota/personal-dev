@@ -36,7 +36,6 @@ public class GameController {
     @PostMapping("/login")
     public String loginCheck(@ModelAttribute("loginForm") LoginForm loginForm) {
         var user = gameService.login(loginForm.getLoginName(), loginForm.getLoginPass());
-        System.out.println(user);
         if(user == null) {
             return "redirect:/title";
         }
@@ -84,7 +83,17 @@ public class GameController {
     public String levelCheck(@RequestParam(name="select")String level) {
         System.out.println(level);
         session.setAttribute("level", level);
-        return "redirect:/playTest";
+        return "redirect:/play";
+    }
+
+    @GetMapping("/play")
+    public String play(Model model) {
+        if(session.getAttribute("level") == null) {
+            return "redirect:/level";
+        }
+        var level = session.getAttribute("level").toString();
+        model.addAttribute("level", level);
+        return "play";
     }
 
     @GetMapping("/playerData")
@@ -99,7 +108,6 @@ public class GameController {
         playerData.setPlayerTime_h(data.time_hard());
         return "playerData";
     }
-
     @GetMapping("/change")
     public String change(@ModelAttribute("changeForm") ChangeForm changeForm) {
         if(session.getAttribute("userS") == null) {
@@ -129,19 +137,5 @@ public class GameController {
         model.addAttribute("N", rankN);
         model.addAttribute("H", rankH);
         return "ranking";
-    }
-
-
-    //プレイ画面（テスト中）
-    @GetMapping("/playTest")
-    public String play(Model model) {
-        var level = session.getAttribute("level").toString();
-        model.addAttribute("level", level);
-        return "playTest";
-    }
-
-    @GetMapping("/test")
-    public String test() {
-        return "test";
     }
 }

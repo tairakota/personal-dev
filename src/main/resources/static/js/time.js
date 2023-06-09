@@ -36,6 +36,8 @@ function startCountdown() {
 // ストップウォッチの処理
 var stopwatchInterval;
 var stopwatchTime = 0;
+var mm = document.getElementById("m");
+var ss = document.getElementById("s");
 
 function startStopwatch() {
   var stopwatchElement = document.getElementById("stopwatch");
@@ -45,8 +47,6 @@ function startStopwatch() {
     var minutes = Math.floor(stopwatchTime / 60);
     var seconds = stopwatchTime % 60;
 
-    var mm = document.getElementById("m");
-    var ss = document.getElementById("s");
     mm.innerText = minutes;
     ss.innerText = seconds;
 
@@ -62,10 +62,8 @@ function stopStopwatch() {
   document.getElementById("clearOverlayId").style.display = "flex";
   document.getElementById("clearPopupId").style.display = "flex";
 
-  const m2 = document.getElementById("m");
-  const s2 = document.getElementById("s");
-  var m = m2.innerText;
-  var s = s2.innerText;
+  var m = mm.innerText;
+  var s = ss.innerText;
   var stopWatch = stopwatchElement.innerText;
 
   if (level.innerText === 'normal') {
