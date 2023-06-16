@@ -113,7 +113,6 @@ public class GameController {
         if(session.getAttribute("userS") == null) {
             return "redirect:/title";
         }
-
         return "change";
     }
     @PostMapping("/change")
