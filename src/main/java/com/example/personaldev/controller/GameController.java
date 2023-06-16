@@ -126,6 +126,7 @@ public class GameController {
         session.setAttribute("userS", after);
         return "redirect:/playerData";
     }
+    
 
     @GetMapping("/ranking")
     public String ranking(Model model) {
